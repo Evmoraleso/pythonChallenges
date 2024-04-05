@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 """
 Primeros auxilios
-Created on Tue Apr  2 17:10:23 2024
 
 @author: elita
     

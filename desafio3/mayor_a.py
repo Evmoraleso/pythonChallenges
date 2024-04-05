@@ -43,14 +43,11 @@ ventas = {
 }
 
 
-while True:
+varumbral=input("Ingrese el valor a filtrar: ")
 
+while not validar_numero(varumbral):
+    print("El número ingresado no es válido. Por favor, ingrese un número.")
     varumbral=input("Ingrese el valor a filtrar: ")
 
-    while not validar_numero(varumbral):
-        print("El número ingresado no es válido. Por favor, ingrese un número.")
-        varumbral=input("Ingrese el valor a filtrar: ")
+mayor_a(varumbral)
     
-    mayor_a(varumbral)
-    
-    break
