@@ -6,7 +6,7 @@ Spyder Editor
 This is a temporary script file.
 """
 
-import re
+import re,sys
 
 def validar_numero(varg):
     # Patrón de expresión regular para validar números enteros
@@ -43,11 +43,11 @@ ventas = {
 }
 
 
-varumbral=input("Ingrese el valor a filtrar: ")
+#varumbral=input("Ingrese el valor a filtrar: ")
+# Verificar que se ingresen los argumentos correctamente
+if len(sys.argv) != 2:
+    print("Error: Debes ingresar 1 argumento como filtro.")
+    sys.exit(1)
 
-while not validar_numero(varumbral):
-    print("El número ingresado no es válido. Por favor, ingrese un número.")
-    varumbral=input("Ingrese el valor a filtrar: ")
-
-mayor_a(varumbral)
+mayor_a(sys.argv[1])
     
