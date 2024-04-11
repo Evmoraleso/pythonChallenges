@@ -2,7 +2,6 @@
 """
 Contador de caracteres y palabras distintas del texto dentro de un archivo txt
 
-@author: elita
 """
 import sys
 
