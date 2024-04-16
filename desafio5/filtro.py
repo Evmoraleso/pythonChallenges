@@ -13,6 +13,7 @@ def umbral(varg,varg1):
     elif varg1=="menor":
         resultado = {clave for clave, valor in precios.items() if valor < int(varg)}
         print(f"Los productos menores al umbral son: {', '.join(resultado)}")
+    else: print("Lo sentimos, no es una operación válida, try it again...")
 
 def main():    
     # Verificar que se ingresen los argumentos correctamente
@@ -20,14 +21,17 @@ def main():
         print("Debe ingresar el valor a filtrar y/o seguido de 'menor'/'mayor' (si no lo indica, por defecto el umbral es mayor al valor ingresado....)")        
         sys.exit(1)
     else:
-        #Captura el error en caso de que el argumento 2 venga sin dato, por lo que toma por defecto 'mayor'
-        try:            
-            maymen=sys.argv[2]
+        # Captura el error en caso de que el argumento 1 no sea numérico
+        if not sys.argv[1].isnumeric():
+            print("El valor a filtrar o umbral, debe ser numérico.")
+            sys.exit(1)        
+        # Captura el error en caso de que el argumento 2 venga sin dato, por lo que toma por defecto 'mayor'
+        try:       
+            maymen = sys.argv[2]
         except IndexError:
-            maymen="mayor"
-            umbral(sys.argv[1],maymen)
-        else:    
-            umbral(sys.argv[1], maymen)
+            maymen = "mayor"
+        # Llama a la función umbral con los argumentos umbral y maymen
+        umbral(sys.argv[1], maymen)
 
 #Main
 if __name__ == "__main__":

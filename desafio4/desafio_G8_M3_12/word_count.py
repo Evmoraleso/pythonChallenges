@@ -16,11 +16,7 @@ def count_chr(archtxt):
 
 def count_word(archtxt):
     #Cuenta las palabras distintas del archivo ipsum.txt
-    listword=[]
-    for word in archtxt.split(" "):        
-        if not listword.__contains__(word):
-            listword.append(word)
-    return print("El número de palabras distintas es: ",len(listword))
+    return print("El número de palabras distintas es: ",len(set(archtxt.split(" "))))
 
 def main():
     # Verificar que se ingresen los argumentos correctamente
