@@ -3,6 +3,7 @@
 Name: Factorial y productoría
 @autor: Liz 
 """
+
 import math
 #Retorna el factorial de un número
 def factorial(argv):
@@ -23,9 +24,20 @@ def calcular(**kwargs):
             lista.append((f"La productoria de {valor} es",productoria(valor)))
     return lista
 
+def info():
+    """[summary]
+    Args:
+    base ([type]): [description]
+    exponente ([type]): [description]
+    Returns:
+    [type]: [description]
+    """
+    pass
+
 def main():
     #Imprime los resultados 
     [print(desc,val) for desc, val in calcular(fact_1 = 5, prod_1 = [4,6,7,4,3], fact_2 = 6)]
 
 if __name__=="__main__":
     main()
+    info()
