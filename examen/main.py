@@ -32,7 +32,7 @@ if opcion == '0':
 while continuar:
 #Llamado a la API
 
-    url='http://localhost:5000/birds'#'https://aves.ninjas.cl/api/birds' #'http://localhost:5000/birds'
+    url= 'http://localhost:5000/birds' #'https://aves.ninjas.cl/api/birds'
     api_content=get_api(url)
     #Llama a la funcion get_template para crear el html
     html=get_template(api_content)
