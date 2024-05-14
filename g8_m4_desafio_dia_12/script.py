@@ -28,7 +28,7 @@ def crea_log():
 
 try:
     crea_log()
-    with open("usuarios.txt") as arch:
+    with open("usuariosd.txt") as arch:
         linea = arch.readline()
 
         while linea:
